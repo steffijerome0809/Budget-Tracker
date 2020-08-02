@@ -1,10 +1,14 @@
 let db;
 const request = indexedDB.open('budget', 1);
 
+//onupgradeneeded handler being used to update the database structure if a database with a higher version number is loaded
+
 request.onupgradeneeded = function (event) {
   const db = event.target.result;
   db.createObjectStore('pending', { autoIncrement: true });
 };
+
+//onsuccess gets the associated record from the IDBObjectStore , updates one property of the record, and then puts the updated record back into the object store.
 
 request.onsuccess = function (event) {
   db = event.target.result;
