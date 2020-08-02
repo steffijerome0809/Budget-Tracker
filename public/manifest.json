@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json.schemastore.org/web-manifest",
+    "short_name": "budget",
+    "name": "Budget Tracker",
+    "description": "a tracker for da budget",
+    "scope": "/",
+    "background_color": "#EEE",
+    "theme_color": "#1565c0",
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "orientation": "any"
+  }
